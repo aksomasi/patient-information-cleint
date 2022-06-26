@@ -1,0 +1,54 @@
+    <div class="wrapper">
+      <div class="registration_form">
+        <h1 style="text-align: center;font-weight: 600">
+          Patient Entry Form
+        </h1>
+
+        <form  [formGroup]="patientEntryForm" >
+          <div class="form_wrap">
+            <div class="input_grp">
+              <div class="input_wrap">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" formControlName="firstName"
+                       class="form-control">
+              </div>
+              <div class="input_wrap">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" formControlName="lastName"
+                       class="form-control">
+              </div>
+            </div>
+            <div class="input_wrap">
+              <label for="email">Email Address</label>
+              <input type="text" id="email" formControlName="email"
+                     class="form-control">
+            </div>
+
+            <div class="input_wrap">
+              <label for="city">City</label>
+              <input type="text" id="city" formControlName="city"
+                     class="form-control">
+            </div>
+            <div class="input_wrap">
+              <label for="country">Country</label>
+              <input type="text" id="country" formControlName="country"
+                     class="form-control">
+            </div>
+
+
+
+            <div class="input_wrap">
+              <input type="submit" value="Register Now" class="submit_btn" (click)="send()">
+            </div>
+
+
+
+          </div>
+
+
+
+
+
+        </form>
+      </div>
+    </div>

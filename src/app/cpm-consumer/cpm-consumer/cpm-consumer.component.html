@@ -1,0 +1,62 @@
+<h1>Patients Information - Total Patients {{patients.length}}</h1>
+<p-table #dt1 [value]="patients"
+         dataKey="id" [rows]="5"
+         [rowHover]="true"
+         styleClass="p-datatable-gridlines"
+         responsiveLayout="scroll">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>
+        <div class="justify-content-between align-items-center">
+          <span >First Name </span>
+        </div>
+      </th>
+      <th>
+        <div class="justify-content-between align-items-center">
+          Last Name
+        </div>
+      </th>
+      <th>
+        <div class="justify-content-between align-items-center">
+Email
+        </div>
+      </th>
+      <th>
+        <div class="justify-content-between align-items-center">
+          City
+        </div>
+      </th>
+
+
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-patient>
+    <tr>
+      <td style="min-width: 12rem;">
+        {{patient.firstName}}
+      </td>
+      <td style="min-width: 12rem;">
+        <span class="image-text ml-2"> {{patient.lastName}}</span>
+      </td>
+      <td style="min-width: 14rem;">
+        <span class="image-text ml-2">{{patient.email}}</span>
+      </td>
+      <td style="min-width: 10rem;">
+        <span class="image-text ml-2">{{patient.city}}</span>
+
+      </td>
+
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="emptymessage">
+    <tr>
+      <td colspan="7">No Data found.</td>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="loadingbody">
+    <tr>
+      <td colspan="7">Loading  Information . Please wait.</td>
+    </tr>
+  </ng-template>
+</p-table>
+<p-toast></p-toast>
